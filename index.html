@@ -4,43 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .main-container{
-            height: 300px;
-            width: 400px;
-            margin: 100px auto;
-            box-shadow: 1px 0px 2px 1px orange;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-transform: capitalize;
-            justify-content: center;
-            
-        }
-
-        .main-container h1{
-            font-family: 'Times New Roman', Times, serif;
-            color: orange;
-        }
-
-        input{
-            display: block;
-            padding: 5px;
-            text-transform: capitalize;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-
-        #grade-btn{
-            width: 100%;
-            padding: 5px;
-            text-transform: capitalize;
-            border-radius: 5px;
-        }
-
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-container">
@@ -51,28 +15,7 @@
            <h3 id="output"></h3>
         </div>
     </div>
-
-    <script>
-      function grade(){
-        let marks = parseInt(document.getElementById('marks').value);
-
-
-        if(isNaN(marks) || marks<0) {
-            document.getElementById('output').innerHTML=`invalid data`;
-        }
-        else if(marks>=90){
-            document.getElementById('output').innerHTML=`grade A`;
-        }
-        else if(marks>=80){
-            document.getElementById('output').innerHTML=`grade B`;
-        }
-        else if(marks>=50){
-            document.getElementById('output').innerHTML=`grade C`;
-        }
-        else{
-            document.getElementById('output').innerHTML=`sorry you are fail`;
-        }
-      }
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
